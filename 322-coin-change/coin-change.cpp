@@ -2,6 +2,7 @@ class Solution {
 public:
 
     int f(int ind, vector<int>&coins, int amount, vector<vector<int>>&dp) {
+        if(amount<0) return INT_MAX;
         if(ind==coins.size()) {
             if(amount==0) return 0;
             return INT_MAX;
